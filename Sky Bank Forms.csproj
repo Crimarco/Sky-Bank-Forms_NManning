@@ -58,6 +58,7 @@
     <Compile Include="client_signup.Designer.cs">
       <DependentUpon>client_signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connection\ServcerConnection.cs" />
     <Compile Include="Loading_page.cs">
       <SubType>Form</SubType>
     </Compile>

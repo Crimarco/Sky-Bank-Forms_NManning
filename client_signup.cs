@@ -16,7 +16,7 @@ namespace Sky_Bank_Forms
         {
             InitializeComponent();
         }
-
+        //SqlConnection connection = new SqlConnection(Data Source )
         private void btn_signup_Click(object sender, EventArgs e)
         {
             pnl_clsignup.BringToFront();
@@ -53,6 +53,19 @@ namespace Sky_Bank_Forms
             Welcome_Page objwelcome = new Welcome_Page();
             objwelcome.Show();
             this.Close();
+        }
+
+        private void pnl_clsignup_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_endsignup_Click(object sender, EventArgs e)
+        {
+            /*y
+            {
+                if()
+            }*/
         }
     }
 }

@@ -75,6 +75,7 @@
             // pnl_left
             // 
             this.pnl_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(173)))), ((int)(((byte)(14)))));
+            this.pnl_left.Controls.Add(this.pnl_clsignin);
             this.pnl_left.Controls.Add(this.label1);
             this.pnl_left.Controls.Add(this.pictureBox1);
             this.pnl_left.Controls.Add(this.btn_back);
@@ -88,11 +89,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Adobe Fangsong Std R", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(93, 290);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 26);
+            this.label1.Size = new System.Drawing.Size(108, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "SKI BANK";
             // 
@@ -145,7 +146,7 @@
             this.pnl_clsignin.Controls.Add(this.textBox1);
             this.pnl_clsignin.Controls.Add(this.lbl_clpassword);
             this.pnl_clsignin.Controls.Add(this.lbl_clusername);
-            this.pnl_clsignin.Location = new System.Drawing.Point(1, 0);
+            this.pnl_clsignin.Location = new System.Drawing.Point(301, 0);
             this.pnl_clsignin.Name = "pnl_clsignin";
             this.pnl_clsignin.Size = new System.Drawing.Size(396, 590);
             this.pnl_clsignin.TabIndex = 4;
@@ -248,7 +249,6 @@
             // 
             // pnl_clsignup
             // 
-            this.pnl_clsignup.Controls.Add(this.pnl_clsignin);
             this.pnl_clsignup.Controls.Add(this.pictureBox3);
             this.pnl_clsignup.Controls.Add(this.txtBx_lastname);
             this.pnl_clsignup.Controls.Add(this.txtBx_conpassword);
@@ -273,6 +273,7 @@
             this.pnl_clsignup.Name = "pnl_clsignup";
             this.pnl_clsignup.Size = new System.Drawing.Size(396, 590);
             this.pnl_clsignup.TabIndex = 1;
+            this.pnl_clsignup.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_clsignup_Paint);
             // 
             // pictureBox3
             // 
@@ -474,6 +475,7 @@
             this.btn_endsignup.TabIndex = 0;
             this.btn_endsignup.Text = "Sign Up";
             this.btn_endsignup.UseVisualStyleBackColor = false;
+            this.btn_endsignup.Click += new System.EventHandler(this.btn_endsignup_Click);
             // 
             // btn_signup
             // 
@@ -495,8 +497,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 590);
-            this.Controls.Add(this.pnl_left);
             this.Controls.Add(this.pnl_clsignup);
+            this.Controls.Add(this.pnl_left);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.IsMdiContainer = true;
             this.Name = "client_signup";
