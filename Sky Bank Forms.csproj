@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agent_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agent_Profile.Designer.cs">
+      <DependentUpon>Agent_Profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Agent_signin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Agent_Profile.resx">
+      <DependentUpon>Agent_Profile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Agent_signin.resx">
       <DependentUpon>Agent_signin.cs</DependentUpon>
     </EmbeddedResource>
