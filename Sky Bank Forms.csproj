@@ -52,6 +52,12 @@
     <Compile Include="Agent_signin.Designer.cs">
       <DependentUpon>Agent_signin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Client_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client_Profile.Designer.cs">
+      <DependentUpon>Client_Profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="client_signup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Agent_signin.resx">
       <DependentUpon>Agent_signin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client_Profile.resx">
+      <DependentUpon>Client_Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="client_signup.resx">
       <DependentUpon>client_signup.cs</DependentUpon>

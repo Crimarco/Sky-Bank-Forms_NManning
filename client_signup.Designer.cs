@@ -145,7 +145,7 @@
             this.pnl_clsignin.Controls.Add(this.textBox1);
             this.pnl_clsignin.Controls.Add(this.lbl_clpassword);
             this.pnl_clsignin.Controls.Add(this.lbl_clusername);
-            this.pnl_clsignin.Location = new System.Drawing.Point(1, 0);
+            this.pnl_clsignin.Location = new System.Drawing.Point(0, 1);
             this.pnl_clsignin.Name = "pnl_clsignin";
             this.pnl_clsignin.Size = new System.Drawing.Size(396, 590);
             this.pnl_clsignin.TabIndex = 4;
@@ -269,7 +269,7 @@
             this.pnl_clsignup.Controls.Add(this.button1);
             this.pnl_clsignup.Controls.Add(this.btn_endsignup);
             this.pnl_clsignup.Controls.Add(this.btn_signup);
-            this.pnl_clsignup.Location = new System.Drawing.Point(304, 0);
+            this.pnl_clsignup.Location = new System.Drawing.Point(306, 1);
             this.pnl_clsignup.Name = "pnl_clsignup";
             this.pnl_clsignup.Size = new System.Drawing.Size(396, 590);
             this.pnl_clsignup.TabIndex = 1;
