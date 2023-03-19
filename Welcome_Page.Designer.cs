@@ -107,9 +107,9 @@
             this.Controls.Add(this.pnl_right);
             this.Controls.Add(this.pnl_left);
             this.ForeColor = System.Drawing.Color.Black;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Welcome_Page";
-            this.Text = "Form1";
+            this.Text = "SKI Bank";
             ((System.ComponentModel.ISupportInitialize)(this.picBx_logo)).EndInit();
             this.pnl_right.ResumeLayout(false);
             this.pnl_left.ResumeLayout(false);

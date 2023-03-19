@@ -52,7 +52,7 @@ namespace Sky_Bank_Forms
         {
             Welcome_Page objwelcome = new Welcome_Page();
             objwelcome.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

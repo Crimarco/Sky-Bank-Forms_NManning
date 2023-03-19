@@ -497,7 +497,7 @@
             this.ClientSize = new System.Drawing.Size(700, 590);
             this.Controls.Add(this.pnl_left);
             this.Controls.Add(this.pnl_clsignup);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.IsMdiContainer = true;
             this.Name = "client_signup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

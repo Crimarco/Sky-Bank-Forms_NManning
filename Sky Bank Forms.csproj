@@ -58,6 +58,12 @@
     <Compile Include="client_signup.Designer.cs">
       <DependentUpon>client_signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Loan_Application.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loan_Application.Designer.cs">
+      <DependentUpon>Loan_Application.cs</DependentUpon>
+    </Compile>
     <Compile Include="Welcome_Page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="client_signup.resx">
       <DependentUpon>client_signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan_Application.resx">
+      <DependentUpon>Loan_Application.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome_Page.resx">
       <DependentUpon>Welcome_Page.cs</DependentUpon>

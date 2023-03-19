@@ -26,14 +26,14 @@ namespace Sky_Bank_Forms
         {
             client_signup objclientmenu = new client_signup();
             objclientmenu.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btn_agentchoice_Click(object sender, EventArgs e)
         {
             Agent_signin objagentmenu = new Agent_signin();
             objagentmenu.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }
