@@ -35,5 +35,10 @@ namespace Sky_Bank_Forms
         {
             timer1.Start();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
