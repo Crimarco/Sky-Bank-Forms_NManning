@@ -24,7 +24,7 @@ namespace Sky_Bank_Forms
 
         private void btn_clientchoice_Click(object sender, EventArgs e)
         {
-            client_signup objclientmenu = new client_signup();
+            FrmClientAccessPortal objclientmenu = new FrmClientAccessPortal();
             objclientmenu.Show();
             this.Hide();
         }

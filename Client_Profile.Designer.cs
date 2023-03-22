@@ -33,12 +33,15 @@
             this.btn_clientlogout = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_clientprofile = new System.Windows.Forms.Label();
+            this.BtnNewLoan = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.BtnNewLoan);
             this.panel1.Location = new System.Drawing.Point(167, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(713, 497);
@@ -78,6 +81,16 @@
             this.lbl_clientprofile.TabIndex = 3;
             this.lbl_clientprofile.Text = "Client Profile";
             // 
+            // BtnNewLoan
+            // 
+            this.BtnNewLoan.Location = new System.Drawing.Point(36, 60);
+            this.BtnNewLoan.Name = "BtnNewLoan";
+            this.BtnNewLoan.Size = new System.Drawing.Size(184, 58);
+            this.BtnNewLoan.TabIndex = 0;
+            this.BtnNewLoan.Text = "Request A New Loan";
+            this.BtnNewLoan.UseVisualStyleBackColor = true;
+            this.BtnNewLoan.Click += new System.EventHandler(this.BtnNewLoan_Click);
+            // 
             // Client_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -91,6 +104,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Client_Profile";
             this.Text = "Client Profile";
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -103,5 +117,6 @@
         private System.Windows.Forms.Button btn_clientlogout;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_clientprofile;
+        private System.Windows.Forms.Button BtnNewLoan;
     }
 }
