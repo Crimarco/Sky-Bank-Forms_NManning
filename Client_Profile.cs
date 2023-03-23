@@ -16,5 +16,11 @@ namespace Sky_Bank_Forms
         {
             InitializeComponent();
         }
+
+        private void BtnNewLoan_Click(object sender, EventArgs e)
+        {
+            //Type type = Type.GetType("ClientSignUp.FrmClientAccessPortal");
+            //ClientSignUp
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Sky_Bank_Forms
 {
-    partial class client_signup
+    partial class FrmClientAccessPortal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(client_signup));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmClientAccessPortal));
             this.pnl_left = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -36,14 +36,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pnl_clsignin = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btn_fsignin = new System.Windows.Forms.Button();
+            this.BtnSignIn = new System.Windows.Forms.Button();
             this.btn_clsignin = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtBxSignInPassword = new System.Windows.Forms.TextBox();
             this.btn_clsignup = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lbl_clpassword = new System.Windows.Forms.Label();
-            this.lbl_clusername = new System.Windows.Forms.Label();
+            this.TxtBxSignInUserName = new System.Windows.Forms.TextBox();
+            this.LblSignPassword = new System.Windows.Forms.Label();
+            this.LblSignUsername = new System.Windows.Forms.Label();
             this.pnl_clsignup = new System.Windows.Forms.Panel();
+            this.Ckbx_ShowPassword = new System.Windows.Forms.CheckBox();
+            this.LblShowPassword = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtBx_lastname = new System.Windows.Forms.TextBox();
             this.txtBx_conpassword = new System.Windows.Forms.TextBox();
@@ -61,9 +63,11 @@
             this.lbl_email = new System.Windows.Forms.Label();
             this.lbl_lastname = new System.Windows.Forms.Label();
             this.lbl_firstname = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_endsignup = new System.Windows.Forms.Button();
+            this.btn_signin = new System.Windows.Forms.Button();
+            this.BtnSignUp = new System.Windows.Forms.Button();
             this.btn_signup = new System.Windows.Forms.Button();
+            this.CkbxSignInShowPassword = new System.Windows.Forms.CheckBox();
+            this.LblSignInShowPassword = new System.Windows.Forms.Label();
             this.pnl_left.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_clsignin.SuspendLayout();
@@ -79,20 +83,19 @@
             this.pnl_left.Controls.Add(this.pictureBox1);
             this.pnl_left.Controls.Add(this.btn_back);
             this.pnl_left.Controls.Add(this.label2);
-            this.pnl_left.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_left.Location = new System.Drawing.Point(0, 0);
             this.pnl_left.Name = "pnl_left";
-            this.pnl_left.Size = new System.Drawing.Size(304, 590);
+            this.pnl_left.Size = new System.Drawing.Size(700, 593);
             this.pnl_left.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Adobe Fangsong Std R", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(93, 290);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 26);
+            this.label1.Size = new System.Drawing.Size(108, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "SKI BANK";
             // 
@@ -137,15 +140,17 @@
             // 
             // pnl_clsignin
             // 
+            this.pnl_clsignin.Controls.Add(this.LblSignInShowPassword);
+            this.pnl_clsignin.Controls.Add(this.CkbxSignInShowPassword);
             this.pnl_clsignin.Controls.Add(this.pictureBox2);
-            this.pnl_clsignin.Controls.Add(this.btn_fsignin);
+            this.pnl_clsignin.Controls.Add(this.BtnSignIn);
             this.pnl_clsignin.Controls.Add(this.btn_clsignin);
-            this.pnl_clsignin.Controls.Add(this.textBox2);
+            this.pnl_clsignin.Controls.Add(this.TxtBxSignInPassword);
             this.pnl_clsignin.Controls.Add(this.btn_clsignup);
-            this.pnl_clsignin.Controls.Add(this.textBox1);
-            this.pnl_clsignin.Controls.Add(this.lbl_clpassword);
-            this.pnl_clsignin.Controls.Add(this.lbl_clusername);
-            this.pnl_clsignin.Location = new System.Drawing.Point(0, 1);
+            this.pnl_clsignin.Controls.Add(this.TxtBxSignInUserName);
+            this.pnl_clsignin.Controls.Add(this.LblSignPassword);
+            this.pnl_clsignin.Controls.Add(this.LblSignUsername);
+            this.pnl_clsignin.Location = new System.Drawing.Point(304, 0);
             this.pnl_clsignin.Name = "pnl_clsignin";
             this.pnl_clsignin.Size = new System.Drawing.Size(396, 590);
             this.pnl_clsignin.TabIndex = 4;
@@ -160,20 +165,20 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // btn_fsignin
+            // BtnSignIn
             // 
-            this.btn_fsignin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(97)))));
-            this.btn_fsignin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(97)))));
-            this.btn_fsignin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_fsignin.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_fsignin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(173)))), ((int)(((byte)(14)))));
-            this.btn_fsignin.Location = new System.Drawing.Point(124, 380);
-            this.btn_fsignin.Name = "btn_fsignin";
-            this.btn_fsignin.Size = new System.Drawing.Size(143, 42);
-            this.btn_fsignin.TabIndex = 1;
-            this.btn_fsignin.Text = "Sign In";
-            this.btn_fsignin.UseVisualStyleBackColor = false;
-            this.btn_fsignin.Click += new System.EventHandler(this.btn_clsignin_Click);
+            this.BtnSignIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(97)))));
+            this.BtnSignIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(97)))));
+            this.BtnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSignIn.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(173)))), ((int)(((byte)(14)))));
+            this.BtnSignIn.Location = new System.Drawing.Point(124, 380);
+            this.BtnSignIn.Name = "BtnSignIn";
+            this.BtnSignIn.Size = new System.Drawing.Size(143, 42);
+            this.BtnSignIn.TabIndex = 4;
+            this.BtnSignIn.Text = "Sign In";
+            this.BtnSignIn.UseVisualStyleBackColor = false;
+            this.BtnSignIn.Click += new System.EventHandler(this.BtnSignIn_Click);
             // 
             // btn_clsignin
             // 
@@ -185,20 +190,19 @@
             this.btn_clsignin.Location = new System.Drawing.Point(15, 38);
             this.btn_clsignin.Name = "btn_clsignin";
             this.btn_clsignin.Size = new System.Drawing.Size(104, 42);
-            this.btn_clsignin.TabIndex = 1;
+            this.btn_clsignin.TabIndex = 5;
             this.btn_clsignin.Text = "Sign In";
             this.btn_clsignin.UseVisualStyleBackColor = false;
-            this.btn_clsignin.Click += new System.EventHandler(this.btn_clsignin_Click);
             // 
-            // textBox2
+            // TxtBxSignInPassword
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.textBox2.Location = new System.Drawing.Point(161, 294);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 20);
-            this.textBox2.TabIndex = 3;
+            this.TxtBxSignInPassword.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.TxtBxSignInPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtBxSignInPassword.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.TxtBxSignInPassword.Location = new System.Drawing.Point(161, 294);
+            this.TxtBxSignInPassword.Name = "TxtBxSignInPassword";
+            this.TxtBxSignInPassword.Size = new System.Drawing.Size(175, 20);
+            this.TxtBxSignInPassword.TabIndex = 2;
             // 
             // btn_clsignup
             // 
@@ -211,44 +215,45 @@
             this.btn_clsignup.Name = "btn_clsignup";
             this.btn_clsignup.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_clsignup.Size = new System.Drawing.Size(104, 42);
-            this.btn_clsignup.TabIndex = 0;
+            this.btn_clsignup.TabIndex = 6;
             this.btn_clsignup.Text = "Sign Up";
             this.btn_clsignup.UseVisualStyleBackColor = true;
             this.btn_clsignup.Click += new System.EventHandler(this.btn_clsignup_Click);
             // 
-            // textBox1
+            // TxtBxSignInUserName
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.textBox1.Location = new System.Drawing.Point(161, 234);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 20);
-            this.textBox1.TabIndex = 3;
+            this.TxtBxSignInUserName.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.TxtBxSignInUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtBxSignInUserName.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.TxtBxSignInUserName.Location = new System.Drawing.Point(161, 234);
+            this.TxtBxSignInUserName.Name = "TxtBxSignInUserName";
+            this.TxtBxSignInUserName.Size = new System.Drawing.Size(175, 20);
+            this.TxtBxSignInUserName.TabIndex = 1;
             // 
-            // lbl_clpassword
+            // LblSignPassword
             // 
-            this.lbl_clpassword.AutoSize = true;
-            this.lbl_clpassword.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_clpassword.Location = new System.Drawing.Point(46, 291);
-            this.lbl_clpassword.Name = "lbl_clpassword";
-            this.lbl_clpassword.Size = new System.Drawing.Size(80, 20);
-            this.lbl_clpassword.TabIndex = 2;
-            this.lbl_clpassword.Text = "Password";
+            this.LblSignPassword.AutoSize = true;
+            this.LblSignPassword.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSignPassword.Location = new System.Drawing.Point(46, 291);
+            this.LblSignPassword.Name = "LblSignPassword";
+            this.LblSignPassword.Size = new System.Drawing.Size(80, 20);
+            this.LblSignPassword.TabIndex = 2;
+            this.LblSignPassword.Text = "Password";
             // 
-            // lbl_clusername
+            // LblSignUsername
             // 
-            this.lbl_clusername.AutoSize = true;
-            this.lbl_clusername.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_clusername.Location = new System.Drawing.Point(46, 234);
-            this.lbl_clusername.Name = "lbl_clusername";
-            this.lbl_clusername.Size = new System.Drawing.Size(93, 20);
-            this.lbl_clusername.TabIndex = 2;
-            this.lbl_clusername.Text = "User Name";
+            this.LblSignUsername.AutoSize = true;
+            this.LblSignUsername.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSignUsername.Location = new System.Drawing.Point(46, 234);
+            this.LblSignUsername.Name = "LblSignUsername";
+            this.LblSignUsername.Size = new System.Drawing.Size(86, 20);
+            this.LblSignUsername.TabIndex = 2;
+            this.LblSignUsername.Text = "Username";
             // 
             // pnl_clsignup
             // 
-            this.pnl_clsignup.Controls.Add(this.pnl_clsignin);
+            this.pnl_clsignup.Controls.Add(this.Ckbx_ShowPassword);
+            this.pnl_clsignup.Controls.Add(this.LblShowPassword);
             this.pnl_clsignup.Controls.Add(this.pictureBox3);
             this.pnl_clsignup.Controls.Add(this.txtBx_lastname);
             this.pnl_clsignup.Controls.Add(this.txtBx_conpassword);
@@ -266,13 +271,32 @@
             this.pnl_clsignup.Controls.Add(this.lbl_email);
             this.pnl_clsignup.Controls.Add(this.lbl_lastname);
             this.pnl_clsignup.Controls.Add(this.lbl_firstname);
-            this.pnl_clsignup.Controls.Add(this.button1);
-            this.pnl_clsignup.Controls.Add(this.btn_endsignup);
+            this.pnl_clsignup.Controls.Add(this.btn_signin);
+            this.pnl_clsignup.Controls.Add(this.BtnSignUp);
             this.pnl_clsignup.Controls.Add(this.btn_signup);
-            this.pnl_clsignup.Location = new System.Drawing.Point(306, 1);
+            this.pnl_clsignup.Location = new System.Drawing.Point(304, 0);
             this.pnl_clsignup.Name = "pnl_clsignup";
             this.pnl_clsignup.Size = new System.Drawing.Size(396, 590);
             this.pnl_clsignup.TabIndex = 1;
+            // 
+            // Ckbx_ShowPassword
+            // 
+            this.Ckbx_ShowPassword.AutoSize = true;
+            this.Ckbx_ShowPassword.Location = new System.Drawing.Point(184, 439);
+            this.Ckbx_ShowPassword.Name = "Ckbx_ShowPassword";
+            this.Ckbx_ShowPassword.Size = new System.Drawing.Size(15, 14);
+            this.Ckbx_ShowPassword.TabIndex = 10;
+            this.Ckbx_ShowPassword.UseVisualStyleBackColor = true;
+            this.Ckbx_ShowPassword.CheckedChanged += new System.EventHandler(this.CkbxShowPassword_CheckedChanged);
+            // 
+            // LblShowPassword
+            // 
+            this.LblShowPassword.AutoSize = true;
+            this.LblShowPassword.Location = new System.Drawing.Point(205, 439);
+            this.LblShowPassword.Name = "LblShowPassword";
+            this.LblShowPassword.Size = new System.Drawing.Size(83, 13);
+            this.LblShowPassword.TabIndex = 15;
+            this.LblShowPassword.Text = "Show Password";
             // 
             // pictureBox3
             // 
@@ -289,7 +313,7 @@
             this.txtBx_lastname.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtBx_lastname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBx_lastname.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.txtBx_lastname.Location = new System.Drawing.Point(169, 180);
+            this.txtBx_lastname.Location = new System.Drawing.Point(184, 180);
             this.txtBx_lastname.Name = "txtBx_lastname";
             this.txtBx_lastname.Size = new System.Drawing.Size(175, 20);
             this.txtBx_lastname.TabIndex = 3;
@@ -299,80 +323,83 @@
             this.txtBx_conpassword.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtBx_conpassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBx_conpassword.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.txtBx_conpassword.Location = new System.Drawing.Point(169, 402);
+            this.txtBx_conpassword.Location = new System.Drawing.Point(184, 402);
             this.txtBx_conpassword.Name = "txtBx_conpassword";
             this.txtBx_conpassword.Size = new System.Drawing.Size(175, 20);
-            this.txtBx_conpassword.TabIndex = 3;
+            this.txtBx_conpassword.TabIndex = 9;
             // 
             // txtBx_password
             // 
             this.txtBx_password.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtBx_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBx_password.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.txtBx_password.Location = new System.Drawing.Point(169, 365);
+            this.txtBx_password.Location = new System.Drawing.Point(184, 365);
             this.txtBx_password.Name = "txtBx_password";
             this.txtBx_password.Size = new System.Drawing.Size(175, 20);
-            this.txtBx_password.TabIndex = 3;
+            this.txtBx_password.TabIndex = 8;
             // 
             // txtBx_tele
             // 
             this.txtBx_tele.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtBx_tele.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBx_tele.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.txtBx_tele.Location = new System.Drawing.Point(169, 327);
+            this.txtBx_tele.Location = new System.Drawing.Point(184, 327);
             this.txtBx_tele.Name = "txtBx_tele";
             this.txtBx_tele.Size = new System.Drawing.Size(175, 20);
-            this.txtBx_tele.TabIndex = 3;
+            this.txtBx_tele.TabIndex = 7;
+            this.txtBx_tele.Text = "e.g. :(876) 444-4444";
             // 
             // txtBx_conemail
             // 
             this.txtBx_conemail.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtBx_conemail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBx_conemail.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.txtBx_conemail.Location = new System.Drawing.Point(169, 290);
+            this.txtBx_conemail.Location = new System.Drawing.Point(184, 290);
             this.txtBx_conemail.Name = "txtBx_conemail";
             this.txtBx_conemail.Size = new System.Drawing.Size(175, 20);
-            this.txtBx_conemail.TabIndex = 3;
+            this.txtBx_conemail.TabIndex = 6;
+            this.txtBx_conemail.Text = "e.g. :example@gmail.com";
             // 
             // txtBx_email
             // 
             this.txtBx_email.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtBx_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBx_email.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.txtBx_email.Location = new System.Drawing.Point(169, 254);
+            this.txtBx_email.Location = new System.Drawing.Point(184, 254);
             this.txtBx_email.Name = "txtBx_email";
             this.txtBx_email.Size = new System.Drawing.Size(175, 20);
-            this.txtBx_email.TabIndex = 3;
+            this.txtBx_email.TabIndex = 5;
+            this.txtBx_email.Text = "e.g. :example@gmail.com";
             // 
             // txtBx_username
             // 
             this.txtBx_username.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtBx_username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBx_username.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.txtBx_username.Location = new System.Drawing.Point(170, 217);
+            this.txtBx_username.Location = new System.Drawing.Point(185, 217);
             this.txtBx_username.Name = "txtBx_username";
             this.txtBx_username.Size = new System.Drawing.Size(175, 20);
-            this.txtBx_username.TabIndex = 3;
+            this.txtBx_username.TabIndex = 4;
             // 
             // txtBx_firstname
             // 
             this.txtBx_firstname.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtBx_firstname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBx_firstname.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.txtBx_firstname.Location = new System.Drawing.Point(169, 143);
+            this.txtBx_firstname.Location = new System.Drawing.Point(184, 143);
             this.txtBx_firstname.Name = "txtBx_firstname";
             this.txtBx_firstname.Size = new System.Drawing.Size(175, 20);
-            this.txtBx_firstname.TabIndex = 3;
+            this.txtBx_firstname.TabIndex = 2;
             // 
             // lbl_username
             // 
             this.lbl_username.AutoSize = true;
             this.lbl_username.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_username.Location = new System.Drawing.Point(47, 217);
+            this.lbl_username.Location = new System.Drawing.Point(64, 217);
             this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(93, 20);
+            this.lbl_username.Size = new System.Drawing.Size(86, 20);
             this.lbl_username.TabIndex = 2;
-            this.lbl_username.Text = "User Name";
+            this.lbl_username.Text = "Username";
             // 
             // lbl_conPassword
             // 
@@ -388,7 +415,7 @@
             // 
             this.lbl_password.AutoSize = true;
             this.lbl_password.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_password.Location = new System.Drawing.Point(60, 365);
+            this.lbl_password.Location = new System.Drawing.Point(71, 365);
             this.lbl_password.Name = "lbl_password";
             this.lbl_password.Size = new System.Drawing.Size(80, 20);
             this.lbl_password.TabIndex = 2;
@@ -398,7 +425,7 @@
             // 
             this.lbl_tele.AutoSize = true;
             this.lbl_tele.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tele.Location = new System.Drawing.Point(37, 327);
+            this.lbl_tele.Location = new System.Drawing.Point(48, 324);
             this.lbl_tele.Name = "lbl_tele";
             this.lbl_tele.Size = new System.Drawing.Size(103, 20);
             this.lbl_tele.TabIndex = 2;
@@ -408,7 +435,7 @@
             // 
             this.lbl_conEmail.AutoSize = true;
             this.lbl_conEmail.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_conEmail.Location = new System.Drawing.Point(25, 290);
+            this.lbl_conEmail.Location = new System.Drawing.Point(36, 290);
             this.lbl_conEmail.Name = "lbl_conEmail";
             this.lbl_conEmail.Size = new System.Drawing.Size(115, 20);
             this.lbl_conEmail.TabIndex = 2;
@@ -418,7 +445,7 @@
             // 
             this.lbl_email.AutoSize = true;
             this.lbl_email.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_email.Location = new System.Drawing.Point(26, 254);
+            this.lbl_email.Location = new System.Drawing.Point(36, 254);
             this.lbl_email.Name = "lbl_email";
             this.lbl_email.Size = new System.Drawing.Size(114, 20);
             this.lbl_email.TabIndex = 2;
@@ -428,52 +455,52 @@
             // 
             this.lbl_lastname.AutoSize = true;
             this.lbl_lastname.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_lastname.Location = new System.Drawing.Point(51, 180);
+            this.lbl_lastname.Location = new System.Drawing.Point(61, 180);
             this.lbl_lastname.Name = "lbl_lastname";
             this.lbl_lastname.Size = new System.Drawing.Size(89, 20);
             this.lbl_lastname.TabIndex = 2;
             this.lbl_lastname.Text = "Last Name";
-            this.lbl_lastname.Click += new System.EventHandler(this.lbl_lastname_Click);
             // 
             // lbl_firstname
             // 
             this.lbl_firstname.AutoSize = true;
             this.lbl_firstname.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_firstname.Location = new System.Drawing.Point(50, 143);
+            this.lbl_firstname.Location = new System.Drawing.Point(60, 143);
             this.lbl_firstname.Name = "lbl_firstname";
             this.lbl_firstname.Size = new System.Drawing.Size(90, 20);
             this.lbl_firstname.TabIndex = 2;
             this.lbl_firstname.Text = "First Name";
             // 
-            // button1
+            // btn_signin
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(14, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 42);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Sign In";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_signin.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_signin.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_signin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_signin.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_signin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_signin.Location = new System.Drawing.Point(14, 26);
+            this.btn_signin.Name = "btn_signin";
+            this.btn_signin.Size = new System.Drawing.Size(104, 42);
+            this.btn_signin.TabIndex = 0;
+            this.btn_signin.Text = "Sign In";
+            this.btn_signin.UseVisualStyleBackColor = false;
+            this.btn_signin.Click += new System.EventHandler(this.btn_signin_Click);
             // 
-            // btn_endsignup
+            // BtnSignUp
             // 
-            this.btn_endsignup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(97)))));
-            this.btn_endsignup.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(97)))));
-            this.btn_endsignup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_endsignup.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_endsignup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(173)))), ((int)(((byte)(14)))));
-            this.btn_endsignup.Location = new System.Drawing.Point(80, 514);
-            this.btn_endsignup.Name = "btn_endsignup";
-            this.btn_endsignup.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_endsignup.Size = new System.Drawing.Size(233, 41);
-            this.btn_endsignup.TabIndex = 0;
-            this.btn_endsignup.Text = "Sign Up";
-            this.btn_endsignup.UseVisualStyleBackColor = false;
+            this.BtnSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(97)))));
+            this.BtnSignUp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(97)))));
+            this.BtnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSignUp.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(173)))), ((int)(((byte)(14)))));
+            this.BtnSignUp.Location = new System.Drawing.Point(80, 514);
+            this.BtnSignUp.Name = "BtnSignUp";
+            this.BtnSignUp.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.BtnSignUp.Size = new System.Drawing.Size(233, 41);
+            this.BtnSignUp.TabIndex = 11;
+            this.BtnSignUp.Text = "Sign Up";
+            this.BtnSignUp.UseVisualStyleBackColor = false;
+            this.BtnSignUp.Click += new System.EventHandler(this.BtnSignUp_Click);
             // 
             // btn_signup
             // 
@@ -485,23 +512,44 @@
             this.btn_signup.Name = "btn_signup";
             this.btn_signup.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_signup.Size = new System.Drawing.Size(104, 42);
-            this.btn_signup.TabIndex = 0;
+            this.btn_signup.TabIndex = 1;
             this.btn_signup.Text = "Sign Up";
             this.btn_signup.UseVisualStyleBackColor = true;
             this.btn_signup.Click += new System.EventHandler(this.btn_signup_Click);
             // 
-            // client_signup
+            // CkbxSignInShowPassword
+            // 
+            this.CkbxSignInShowPassword.AutoSize = true;
+            this.CkbxSignInShowPassword.Location = new System.Drawing.Point(164, 330);
+            this.CkbxSignInShowPassword.Name = "CkbxSignInShowPassword";
+            this.CkbxSignInShowPassword.Size = new System.Drawing.Size(15, 14);
+            this.CkbxSignInShowPassword.TabIndex = 3;
+            this.CkbxSignInShowPassword.UseVisualStyleBackColor = true;
+            this.CkbxSignInShowPassword.CheckedChanged += new System.EventHandler(this.CkbxSignInShowPassword_CheckedChanged);
+            // 
+            // LblSignInShowPassword
+            // 
+            this.LblSignInShowPassword.AutoSize = true;
+            this.LblSignInShowPassword.Location = new System.Drawing.Point(185, 331);
+            this.LblSignInShowPassword.Name = "LblSignInShowPassword";
+            this.LblSignInShowPassword.Size = new System.Drawing.Size(83, 13);
+            this.LblSignInShowPassword.TabIndex = 15;
+            this.LblSignInShowPassword.Text = "Show Password";
+            // 
+            // FrmClientAccessPortal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 590);
+            this.Controls.Add(this.pnl_clsignin);
             this.Controls.Add(this.pnl_left);
             this.Controls.Add(this.pnl_clsignup);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.IsMdiContainer = true;
-            this.Name = "client_signup";
+            this.Name = "FrmClientAccessPortal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "client form";
+            this.Text = "Client Form";
+            this.Load += new System.EventHandler(this.FrmClientAccessPortal_Load);
             this.pnl_left.ResumeLayout(false);
             this.pnl_left.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -522,7 +570,7 @@
         private System.Windows.Forms.Panel pnl_clsignup;
         private System.Windows.Forms.Label lbl_lastname;
         private System.Windows.Forms.Label lbl_firstname;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_signin;
         private System.Windows.Forms.Button btn_signup;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_username;
@@ -531,7 +579,7 @@
         private System.Windows.Forms.Label lbl_tele;
         private System.Windows.Forms.Label lbl_conEmail;
         private System.Windows.Forms.Label lbl_email;
-        private System.Windows.Forms.Button btn_endsignup;
+        private System.Windows.Forms.Button BtnSignUp;
         private System.Windows.Forms.TextBox txtBx_firstname;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.TextBox txtBx_lastname;
@@ -545,13 +593,17 @@
         private System.Windows.Forms.Panel pnl_clsignin;
         private System.Windows.Forms.Button btn_clsignin;
         private System.Windows.Forms.Button btn_clsignup;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lbl_clpassword;
-        private System.Windows.Forms.Label lbl_clusername;
-        private System.Windows.Forms.Button btn_fsignin;
+        private System.Windows.Forms.TextBox TxtBxSignInPassword;
+        private System.Windows.Forms.TextBox TxtBxSignInUserName;
+        private System.Windows.Forms.Label LblSignPassword;
+        private System.Windows.Forms.Label LblSignUsername;
+        private System.Windows.Forms.Button BtnSignIn;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.CheckBox Ckbx_ShowPassword;
+        private System.Windows.Forms.Label LblShowPassword;
+        private System.Windows.Forms.Label LblSignInShowPassword;
+        private System.Windows.Forms.CheckBox CkbxSignInShowPassword;
     }
 }
 
