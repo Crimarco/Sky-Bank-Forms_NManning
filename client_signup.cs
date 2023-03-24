@@ -9,16 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 
 namespace Sky_Bank_Forms
 {
     public partial class FrmClientAccessPortal : Form
     {
-        SqlCommand cmd;
-        SqlConnection conn;
-        SqlDataReader dataReader;
-
         public FrmClientAccessPortal()
         {
             InitializeComponent();
@@ -43,6 +41,8 @@ namespace Sky_Bank_Forms
                 }    
             }
         }
+        
+
         // this method uses regular expression to set the range of valid email characters
         public bool IsValidEmail(string emailAddress)
         {
@@ -122,8 +122,8 @@ namespace Sky_Bank_Forms
         // this method validates all fields before registering the user
         private void BtnSignUp_Click(object sender, EventArgs e)
         {
-            string cmdString1 = "select * from LoginTable where Username='" + txtBx_username.Text + "'";
-            string cmdString2 = "insert into LoginTable values (@FirstName, @LastName, @Username, @EmailAddress, @TelephoneNumber, @Password)";
+            string filePath = @"C:\Users\Nathaniel Manning\Desktop\Sky Bank\Registration.txt";
+            bool duplicateRecordFound = false;
 
             bool validEmail = IsValidEmail(txtBx_email.Text);
             bool validContactNumber = ValidatePhoneNumber(txtBx_tele.Text);
@@ -131,44 +131,48 @@ namespace Sky_Bank_Forms
 
             // checks whether any text field has data
             if (!string.IsNullOrEmpty(txtBx_firstname.Text) && !string.IsNullOrEmpty(txtBx_lastname.Text)
-                        && !string.IsNullOrEmpty(txtBx_username.Text) && !string.IsNullOrEmpty(txtBx_email.Text)
-                        && !string.IsNullOrEmpty(txtBx_conemail.Text) && !string.IsNullOrEmpty(txtBx_password.Text)
-                        && !string.IsNullOrEmpty(txtBx_conpassword.Text) && !string.IsNullOrEmpty(txtBx_tele.Text))
+                && !string.IsNullOrEmpty(txtBx_username.Text) && !string.IsNullOrEmpty(txtBx_email.Text)
+                && !string.IsNullOrEmpty(txtBx_conemail.Text) && !string.IsNullOrEmpty(txtBx_password.Text)
+                && !string.IsNullOrEmpty(txtBx_conpassword.Text) && !string.IsNullOrEmpty(txtBx_tele.Text))
             {
-                // checks whether the email and the password entered are identical when confirmed
+                // checks that email and password confirmations match
                 if (txtBx_password.Text == txtBx_conpassword.Text && txtBx_email.Text == txtBx_conemail.Text && validEmail
                     && validContactNumber)
                 {
-                    cmd = new SqlCommand(cmdString1, conn);
-                    dataReader = cmd.ExecuteReader();
-
-                    if (dataReader.Read())
+                    // Check for duplicate records in the file
+                    string[] lines = File.Exists(filePath) ? File.ReadAllLines(filePath) : new string[0];
+                    foreach (string line in lines)
                     {
-                        dataReader.Close();
-                        MessageBox.Show("Username already exists. Please try another username.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    }
-                    else
-                    {
-                        dataReader.Close();
-                        cmd = new SqlCommand(cmdString2, conn);
-                        cmd.Parameters.AddWithValue("FirstName", txtBx_firstname.Text);
-                        cmd.Parameters.AddWithValue("LastName", txtBx_lastname.Text);
-                        cmd.Parameters.AddWithValue("Username", txtBx_username.Text);
-                        cmd.Parameters.AddWithValue("EmailAddress", txtBx_email.Text);
-                        cmd.Parameters.AddWithValue("TelephoneNumber", txtBx_email.Text);
-                        cmd.Parameters.AddWithValue("Password", txtBx_password.Text);
-                        cmd.ExecuteNonQuery();
-
-                        MessageBox.Show("Your account was successfully created. You may now login.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        // invokes the method the clears all fields on the form
-                        ClearFormData(this.Controls);
-                        pnl_clsignin.Show();
-                        pnl_clsignin.BringToFront();
+                        string[] data = line.Split(',');
+                        if (data[3] == txtBx_email.Text)
+                        {
+                            duplicateRecordFound = true;
+                            MessageBox.Show("Email already exists. Please try another email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                        }
+                        if (data[2] == txtBx_username.Text)
+                        {
+                            duplicateRecordFound = true;
+                            MessageBox.Show("Username already exists. Please try another username.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                        }
                     }
 
+                    if (!duplicateRecordFound)
+                    {
+                        // Add new user record to the file
+                        using (StreamWriter writer = File.AppendText(filePath))
+                        {
+                            writer.WriteLine($"{txtBx_firstname.Text},{txtBx_lastname.Text},{txtBx_username.Text},{txtBx_email.Text},{txtBx_password.Text},{txtBx_tele.Text}");
+                            MessageBox.Show("Your account was successfully created. You may now login.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ClearFormData(this.Controls);
+                            pnl_clsignin.Show();
+                            pnl_clsignin.BringToFront();
+                        }
+                    }
                 }
-                // checks and showsan error message if the email is invalid
+
+                // checks and shows an error message if the email is invalid
                 if (!validEmail) MessageBox.Show("Invalid email!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 // checks and shows an error message for unmatched passwords;
@@ -185,49 +189,66 @@ namespace Sky_Bank_Forms
             {
                 MessageBox.Show("Empty fields are not allowed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            pnl_clsignup.Enabled = true;
         }
+
+
         // this method loads with preset behaviors for other methods with the class 
         private void FrmClientAccessPortal_Load(object sender, EventArgs e)
         {
-            // creates connection to local database
-            conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Nathaniel Manning\Desktop\Sky Bank\ClientDatabase.mdf"";Integrated Security=True");
-            conn.Open();
             txtBx_password.UseSystemPasswordChar = true;
             txtBx_conpassword.UseSystemPasswordChar = true;
             TxtBxSignInPassword.UseSystemPasswordChar = true;
-
         }
+
         // this method signs in the client to the system's database
         private void BtnSignIn_Click(object sender, EventArgs e)
         {
-            // checks whether the fields password or username are empty
-            if(TxtBxSignInPassword.Text != string.Empty || TxtBxSignInUserName.Text != string.Empty)
+            string filePath = @"C:\Users\Nathaniel Manning\Desktop\Sky Bank\Registration.txt";
+            if (!File.Exists(filePath))
             {
-                cmd = new SqlCommand("select * from LoginTable where username='" + TxtBxSignInUserName.Text + "' and password='" + txtBx_password.Text + "'", conn);
-                dataReader = cmd.ExecuteReader();
-                if(dataReader.Read())
+                MessageBox.Show("No registration records found. Please register first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // checks whether the fields password or username are empty
+            if (!string.IsNullOrEmpty(TxtBxSignInPassword.Text) && !string.IsNullOrEmpty(TxtBxSignInUserName.Text))
+            {
+                bool loginSuccess = false;
+
+                // reads all lines from the text file and loops through them to find a matching record
+                string[] lines = File.ReadAllLines(filePath);
+                foreach (string line in lines)
                 {
-                    dataReader.Close();
+                    string[] fields = line.Split(',');
+                    if (fields[2] == TxtBxSignInUserName.Text && fields[4] == TxtBxSignInPassword.Text)
+                    {
+                        loginSuccess = true;
+                        break;
+                    }
+                }
+
+                // if the login is successful, hide the login form and show the client profile form
+                if (loginSuccess)
+                {
                     this.Hide();
                     Client_Profile clientProfile = new Client_Profile();
                     clientProfile.Show();
-    
                 }
                 else
                 {
-                    dataReader.Close();
                     MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ClearFormData(this.Controls);
-
                 }
-
             }
             else
             {
                 MessageBox.Show("Empty fields are not allowed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            pnl_clsignin.Enabled = true;
         }
+
 
         private void CkbxSignInShowPassword_CheckedChanged(object sender, EventArgs e)
         {

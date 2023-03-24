@@ -16,5 +16,10 @@ namespace Sky_Bank_Forms
         {
             InitializeComponent();
         }
+
+        private void BtnCompletedForm_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Your loan is saved and will be processed shorty!");
+        }
     }
 }
