@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Client_Profile));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnNewLoan = new System.Windows.Forms.Button();
             this.btn_clientlogout = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_clientprofile = new System.Windows.Forms.Label();
-            this.BtnNewLoan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +46,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(713, 497);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnNewLoan
+            // 
+            this.BtnNewLoan.Location = new System.Drawing.Point(36, 60);
+            this.BtnNewLoan.Name = "BtnNewLoan";
+            this.BtnNewLoan.Size = new System.Drawing.Size(184, 58);
+            this.BtnNewLoan.TabIndex = 0;
+            this.BtnNewLoan.Text = "Request A New Loan";
+            this.BtnNewLoan.UseVisualStyleBackColor = true;
+            this.BtnNewLoan.Click += new System.EventHandler(this.BtnNewLoan_Click);
             // 
             // btn_clientlogout
             // 
@@ -80,16 +90,6 @@
             this.lbl_clientprofile.Size = new System.Drawing.Size(125, 24);
             this.lbl_clientprofile.TabIndex = 3;
             this.lbl_clientprofile.Text = "Client Profile";
-            // 
-            // BtnNewLoan
-            // 
-            this.BtnNewLoan.Location = new System.Drawing.Point(36, 60);
-            this.BtnNewLoan.Name = "BtnNewLoan";
-            this.BtnNewLoan.Size = new System.Drawing.Size(184, 58);
-            this.BtnNewLoan.TabIndex = 0;
-            this.BtnNewLoan.Text = "Request A New Loan";
-            this.BtnNewLoan.UseVisualStyleBackColor = true;
-            this.BtnNewLoan.Click += new System.EventHandler(this.BtnNewLoan_Click);
             // 
             // Client_Profile
             // 

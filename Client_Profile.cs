@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Sky_Bank_Forms
 {
     public partial class Client_Profile : Form
@@ -19,8 +20,10 @@ namespace Sky_Bank_Forms
 
         private void BtnNewLoan_Click(object sender, EventArgs e)
         {
-            //Type type = Type.GetType("ClientSignUp.FrmClientAccessPortal");
-            //ClientSignUp
+            Loan_Application loanApplication = new Loan_Application();
+
+            loanApplication.Show();
+            
         }
     }
 }

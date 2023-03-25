@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loan_Application));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblBack = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -92,7 +92,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lbl_rname = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnCompletedForm = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
@@ -127,7 +127,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(173)))), ((int)(((byte)(14)))));
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblBack);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
@@ -136,16 +136,16 @@
             this.panel1.Size = new System.Drawing.Size(317, 543);
             this.panel1.TabIndex = 0;
             // 
-            // label3
+            // lblBack
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(21, 497);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Back";
+            this.lblBack.AutoSize = true;
+            this.lblBack.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblBack.Location = new System.Drawing.Point(21, 497);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(45, 20);
+            this.lblBack.TabIndex = 3;
+            this.lblBack.Text = "Back";
             // 
             // label2
             // 
@@ -367,6 +367,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(162, 16);
             this.textBox4.TabIndex = 0;
+            this.textBox4.Text = "e.g: (876)444-4444";
             // 
             // dateTimePicker1
             // 
@@ -729,6 +730,7 @@
             this.txtBx_telenum.Name = "txtBx_telenum";
             this.txtBx_telenum.Size = new System.Drawing.Size(162, 16);
             this.txtBx_telenum.TabIndex = 0;
+            this.txtBx_telenum.Text = "e.g: (876)444-4444";
             // 
             // panel7
             // 
@@ -874,7 +876,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Controls.Add(this.button1);
+            this.panel10.Controls.Add(this.BtnCompletedForm);
             this.panel10.Controls.Add(this.radioButton2);
             this.panel10.Controls.Add(this.radioButton1);
             this.panel10.Controls.Add(this.label6);
@@ -899,18 +901,19 @@
             this.panel10.Size = new System.Drawing.Size(408, 542);
             this.panel10.TabIndex = 2;
             // 
-            // button1
+            // BtnCompletedForm
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(257, 485);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 35);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Completed";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnCompletedForm.BackColor = System.Drawing.Color.White;
+            this.BtnCompletedForm.FlatAppearance.BorderSize = 0;
+            this.BtnCompletedForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCompletedForm.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCompletedForm.Location = new System.Drawing.Point(257, 485);
+            this.BtnCompletedForm.Name = "BtnCompletedForm";
+            this.BtnCompletedForm.Size = new System.Drawing.Size(130, 35);
+            this.BtnCompletedForm.TabIndex = 3;
+            this.BtnCompletedForm.Text = "Completed";
+            this.BtnCompletedForm.UseVisualStyleBackColor = false;
+            this.BtnCompletedForm.Click += new System.EventHandler(this.BtnCompletedForm_Click);
             // 
             // radioButton2
             // 
@@ -1086,7 +1089,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblBack;
         private System.Windows.Forms.Panel pnl_personal;
         private System.Windows.Forms.ComboBox cmboBxGender;
         private System.Windows.Forms.Label lbl_Name;
@@ -1152,7 +1155,7 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnCompletedForm;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.TextBox txtBx_jobtitle;
         private System.Windows.Forms.Label lbl_jobtitle;
