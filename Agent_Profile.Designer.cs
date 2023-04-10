@@ -41,7 +41,7 @@
             this.lbl_agentprofile.AutoSize = true;
             this.lbl_agentprofile.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_agentprofile.ForeColor = System.Drawing.Color.White;
-            this.lbl_agentprofile.Location = new System.Drawing.Point(23, 230);
+            this.lbl_agentprofile.Location = new System.Drawing.Point(23, 132);
             this.lbl_agentprofile.Name = "lbl_agentprofile";
             this.lbl_agentprofile.Size = new System.Drawing.Size(127, 24);
             this.lbl_agentprofile.TabIndex = 7;
@@ -63,7 +63,7 @@
             this.btn_agentlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_agentlogout.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_agentlogout.ForeColor = System.Drawing.Color.White;
-            this.btn_agentlogout.Location = new System.Drawing.Point(12, 472);
+            this.btn_agentlogout.Location = new System.Drawing.Point(27, 206);
             this.btn_agentlogout.Name = "btn_agentlogout";
             this.btn_agentlogout.Size = new System.Drawing.Size(123, 37);
             this.btn_agentlogout.TabIndex = 5;
@@ -75,7 +75,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(167, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(713, 497);
+            this.panel1.Size = new System.Drawing.Size(506, 285);
             this.panel1.TabIndex = 4;
             // 
             // Agent_Profile
@@ -83,7 +83,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(97)))));
-            this.ClientSize = new System.Drawing.Size(892, 521);
+            this.ClientSize = new System.Drawing.Size(685, 311);
             this.Controls.Add(this.lbl_agentprofile);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_agentlogout);

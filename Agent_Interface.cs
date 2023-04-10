@@ -20,7 +20,7 @@ namespace Sky_Bank_Forms
         private void agentProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Agent_Profile agentProfile = new Agent_Profile();
-
+            agentProfile.Show();
             
         }
     }
