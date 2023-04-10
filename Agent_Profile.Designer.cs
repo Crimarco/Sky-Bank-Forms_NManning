@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agent_Profile));
             this.lbl_agentprofile = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_agentlogout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,19 +56,6 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_agentlogout
-            // 
-            this.btn_agentlogout.FlatAppearance.BorderSize = 0;
-            this.btn_agentlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agentlogout.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agentlogout.ForeColor = System.Drawing.Color.White;
-            this.btn_agentlogout.Location = new System.Drawing.Point(27, 206);
-            this.btn_agentlogout.Name = "btn_agentlogout";
-            this.btn_agentlogout.Size = new System.Drawing.Size(123, 37);
-            this.btn_agentlogout.TabIndex = 5;
-            this.btn_agentlogout.Text = "LOG OUT";
-            this.btn_agentlogout.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -86,7 +72,6 @@
             this.ClientSize = new System.Drawing.Size(685, 311);
             this.Controls.Add(this.lbl_agentprofile);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btn_agentlogout);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Agent_Profile";
@@ -101,7 +86,6 @@
 
         private System.Windows.Forms.Label lbl_agentprofile;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_agentlogout;
         private System.Windows.Forms.Panel panel1;
     }
 }

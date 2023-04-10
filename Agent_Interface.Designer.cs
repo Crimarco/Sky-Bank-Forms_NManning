@@ -40,6 +40,7 @@
             this.modifyClientFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.summaryReportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lOGOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mStrip_Agent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +61,8 @@
             this.loanFormModificationToolStripMenuItem,
             this.createModifyMessageToolStripMenuItem,
             this.modifyClientFormToolStripMenuItem,
-            this.summaryReportToolStripMenuItem1});
+            this.summaryReportToolStripMenuItem1,
+            this.lOGOUTToolStripMenuItem});
             this.mStrip_Agent.Location = new System.Drawing.Point(0, 0);
             this.mStrip_Agent.Name = "mStrip_Agent";
             this.mStrip_Agent.Size = new System.Drawing.Size(212, 563);
@@ -168,6 +170,16 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // lOGOUTToolStripMenuItem
+            // 
+            this.lOGOUTToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lOGOUTToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.lOGOUTToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 9, 2, 7);
+            this.lOGOUTToolStripMenuItem.Name = "lOGOUTToolStripMenuItem";
+            this.lOGOUTToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4);
+            this.lOGOUTToolStripMenuItem.Size = new System.Drawing.Size(195, 32);
+            this.lOGOUTToolStripMenuItem.Text = "LOG OUT";
+            // 
             // Agent_Interface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,5 +215,6 @@
         private System.Windows.Forms.ToolStripMenuItem modifyClientFormToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem summaryReportToolStripMenuItem1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem lOGOUTToolStripMenuItem;
     }
 }
