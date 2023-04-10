@@ -44,17 +44,5 @@ namespace Sky_Bank_Forms
             this.Hide();
         }
 
-        private void btn_agentsignup_Click(object sender, EventArgs e)
-        {
-            pnl_agentsignup.BringToFront();
-            pnl_agentsignin.Hide();
-        }
-
-        private void btn_agentsignin_Click(object sender, EventArgs e)
-        {
-            pnl_agentsignup.SendToBack();
-            pnl_agentsignin.Show();
-            pnl_agentsignin.BringToFront();
-        }
     }
 }
