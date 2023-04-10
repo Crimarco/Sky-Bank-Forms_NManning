@@ -46,6 +46,11 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +79,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.textBox4);
@@ -81,7 +89,9 @@
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -199,7 +209,7 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(182, 280);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(180, 20);
+            this.textBox4.Size = new System.Drawing.Size(149, 20);
             this.textBox4.TabIndex = 5;
             // 
             // label7
@@ -218,6 +228,59 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(180, 20);
             this.textBox5.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(401, 100);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(88, 40);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Terms and \r\nConditions\r\n";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(495, 102);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(200, 112);
+            this.textBox6.TabIndex = 5;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(495, 238);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(59, 17);
+            this.radioButton1.TabIndex = 7;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Accept";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(598, 238);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(50, 17);
+            this.radioButton2.TabIndex = 7;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Deny";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(173)))), ((int)(((byte)(14)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(523, 294);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(137, 51);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Submit Request";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // LoanRequest
             // 
@@ -258,5 +321,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
