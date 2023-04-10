@@ -34,6 +34,7 @@
             this.btn_clientlogout = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_clientprofile = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -41,6 +42,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.BtnNewLoan);
             this.panel1.Location = new System.Drawing.Point(167, 12);
             this.panel1.Name = "panel1";
@@ -49,7 +51,7 @@
             // 
             // BtnNewLoan
             // 
-            this.BtnNewLoan.Location = new System.Drawing.Point(36, 60);
+            this.BtnNewLoan.Location = new System.Drawing.Point(512, 425);
             this.BtnNewLoan.Name = "BtnNewLoan";
             this.BtnNewLoan.Size = new System.Drawing.Size(184, 58);
             this.BtnNewLoan.TabIndex = 0;
@@ -85,11 +87,22 @@
             this.lbl_clientprofile.AutoSize = true;
             this.lbl_clientprofile.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_clientprofile.ForeColor = System.Drawing.Color.White;
-            this.lbl_clientprofile.Location = new System.Drawing.Point(23, 230);
+            this.lbl_clientprofile.Location = new System.Drawing.Point(23, 122);
             this.lbl_clientprofile.Name = "lbl_clientprofile";
             this.lbl_clientprofile.Size = new System.Drawing.Size(125, 24);
             this.lbl_clientprofile.TabIndex = 3;
             this.lbl_clientprofile.Text = "Client Profile";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(22, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(175, 24);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Account Summary";
             // 
             // Client_Profile
             // 
@@ -105,6 +118,7 @@
             this.Name = "Client_Profile";
             this.Text = "Client Profile";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -118,5 +132,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_clientprofile;
         private System.Windows.Forms.Button BtnNewLoan;
+        private System.Windows.Forms.Label label1;
     }
 }

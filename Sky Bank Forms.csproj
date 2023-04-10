@@ -97,6 +97,12 @@
     <Compile Include="Loading_page.Designer.cs">
       <DependentUpon>Loading_page.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoanRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoanRequest.Designer.cs">
+      <DependentUpon>LoanRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Loan_Application.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Loading_page.resx">
       <DependentUpon>Loading_page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoanRequest.resx">
+      <DependentUpon>LoanRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loan_Application.resx">
       <DependentUpon>Loan_Application.cs</DependentUpon>
