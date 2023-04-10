@@ -16,7 +16,7 @@ namespace Sky_Bank_Forms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Agent_Interface());
+            Application.Run(new Loading_page());
         }
     }
 }
