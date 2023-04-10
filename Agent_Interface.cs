@@ -23,5 +23,11 @@ namespace Sky_Bank_Forms
             agentProfile.Show();
             
         }
+
+        private void DepositfundsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Deposit_Funds depositfunds = new Deposit_Funds();
+            depositfunds.Show();
+        }
     }
 }

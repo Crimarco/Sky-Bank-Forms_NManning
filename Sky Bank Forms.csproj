@@ -91,6 +91,12 @@
     <Compile Include="Client_SignUp.Designer.cs">
       <DependentUpon>Client_SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Deposit Funds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deposit Funds.Designer.cs">
+      <DependentUpon>Deposit Funds.cs</DependentUpon>
+    </Compile>
     <Compile Include="Loading_page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Client_SignUp.resx">
       <DependentUpon>Client_SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deposit Funds.resx">
+      <DependentUpon>Deposit Funds.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loading_page.resx">
       <DependentUpon>Loading_page.cs</DependentUpon>

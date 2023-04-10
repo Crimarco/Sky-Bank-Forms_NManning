@@ -32,7 +32,7 @@
             this.mStrip_Agent = new System.Windows.Forms.MenuStrip();
             this.agentProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.summaryReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DepositfundsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateClientInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewClientsListsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loanFormModificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +55,7 @@
             this.mStrip_Agent.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agentProfileToolStripMenuItem,
             this.clientListToolStripMenuItem,
-            this.summaryReportToolStripMenuItem,
+            this.DepositfundsToolStripMenuItem,
             this.updateClientInformationToolStripMenuItem,
             this.viewClientsListsToolStripMenuItem,
             this.loanFormModificationToolStripMenuItem,
@@ -90,15 +90,16 @@
             this.clientListToolStripMenuItem.Size = new System.Drawing.Size(195, 31);
             this.clientListToolStripMenuItem.Text = "Add/Remove Admin";
             // 
-            // summaryReportToolStripMenuItem
+            // DepositfundsToolStripMenuItem
             // 
-            this.summaryReportToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.summaryReportToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.summaryReportToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 9, 2, 7);
-            this.summaryReportToolStripMenuItem.Name = "summaryReportToolStripMenuItem";
-            this.summaryReportToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4);
-            this.summaryReportToolStripMenuItem.Size = new System.Drawing.Size(195, 31);
-            this.summaryReportToolStripMenuItem.Text = "Deposit Funds";
+            this.DepositfundsToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepositfundsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.DepositfundsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 9, 2, 7);
+            this.DepositfundsToolStripMenuItem.Name = "DepositfundsToolStripMenuItem";
+            this.DepositfundsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4);
+            this.DepositfundsToolStripMenuItem.Size = new System.Drawing.Size(195, 31);
+            this.DepositfundsToolStripMenuItem.Text = "Deposit Funds";
+            this.DepositfundsToolStripMenuItem.Click += new System.EventHandler(this.DepositfundsToolStripMenuItem_Click);
             // 
             // updateClientInformationToolStripMenuItem
             // 
@@ -207,7 +208,7 @@
         private System.Windows.Forms.MenuStrip mStrip_Agent;
         private System.Windows.Forms.ToolStripMenuItem agentProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientListToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem summaryReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DepositfundsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateClientInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewClientsListsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loanFormModificationToolStripMenuItem;
