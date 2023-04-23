@@ -29,5 +29,17 @@ namespace Sky_Bank_Forms
             Deposit_Funds depositfunds = new Deposit_Funds();
             depositfunds.Show();
         }
+
+        private void updateClientInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Update_clientinfo updateinfo = new Update_clientinfo();
+            updateinfo.Show();  
+        }
+
+        private void add_remove_agentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Remove_agent addagent = new Add_Remove_agent();
+            addagent.Show();
+        }
     }
 }

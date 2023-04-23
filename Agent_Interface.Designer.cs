@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agent_Interface));
             this.mStrip_Agent = new System.Windows.Forms.MenuStrip();
             this.agentProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.add_remove_agentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DepositfundsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateClientInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewClientsListsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,8 +39,8 @@
             this.createModifyMessageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifyClientFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.summaryReportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lOGOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mStrip_Agent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +54,7 @@
             this.mStrip_Agent.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mStrip_Agent.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agentProfileToolStripMenuItem,
-            this.clientListToolStripMenuItem,
+            this.add_remove_agentToolStripMenuItem,
             this.DepositfundsToolStripMenuItem,
             this.updateClientInformationToolStripMenuItem,
             this.viewClientsListsToolStripMenuItem,
@@ -80,15 +80,16 @@
             this.agentProfileToolStripMenuItem.Text = "Agent Profile";
             this.agentProfileToolStripMenuItem.Click += new System.EventHandler(this.agentProfileToolStripMenuItem_Click);
             // 
-            // clientListToolStripMenuItem
+            // add_remove_agentToolStripMenuItem
             // 
-            this.clientListToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clientListToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.clientListToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 9, 2, 7);
-            this.clientListToolStripMenuItem.Name = "clientListToolStripMenuItem";
-            this.clientListToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4);
-            this.clientListToolStripMenuItem.Size = new System.Drawing.Size(195, 31);
-            this.clientListToolStripMenuItem.Text = "Add/Remove Admin";
+            this.add_remove_agentToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_remove_agentToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.add_remove_agentToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 9, 2, 7);
+            this.add_remove_agentToolStripMenuItem.Name = "add_remove_agentToolStripMenuItem";
+            this.add_remove_agentToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4);
+            this.add_remove_agentToolStripMenuItem.Size = new System.Drawing.Size(195, 31);
+            this.add_remove_agentToolStripMenuItem.Text = "Add/Remove Admin";
+            this.add_remove_agentToolStripMenuItem.Click += new System.EventHandler(this.add_remove_agentToolStripMenuItem_Click);
             // 
             // DepositfundsToolStripMenuItem
             // 
@@ -110,6 +111,7 @@
             this.updateClientInformationToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4);
             this.updateClientInformationToolStripMenuItem.Size = new System.Drawing.Size(195, 31);
             this.updateClientInformationToolStripMenuItem.Text = "Update Client Information";
+            this.updateClientInformationToolStripMenuItem.Click += new System.EventHandler(this.updateClientInformationToolStripMenuItem_Click);
             // 
             // viewClientsListsToolStripMenuItem
             // 
@@ -161,16 +163,6 @@
             this.summaryReportToolStripMenuItem1.Size = new System.Drawing.Size(195, 31);
             this.summaryReportToolStripMenuItem1.Text = "Summary Report";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(53, 491);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // lOGOUTToolStripMenuItem
             // 
             this.lOGOUTToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,6 +172,16 @@
             this.lOGOUTToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4);
             this.lOGOUTToolStripMenuItem.Size = new System.Drawing.Size(195, 32);
             this.lOGOUTToolStripMenuItem.Text = "LOG OUT";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(53, 491);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // Agent_Interface
             // 
@@ -207,7 +209,7 @@
 
         private System.Windows.Forms.MenuStrip mStrip_Agent;
         private System.Windows.Forms.ToolStripMenuItem agentProfileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientListToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem add_remove_agentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem DepositfundsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateClientInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewClientsListsToolStripMenuItem;

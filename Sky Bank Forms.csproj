@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_Remove_agent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Remove_agent.Designer.cs">
+      <DependentUpon>Add_Remove_agent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Agent_Interface.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +97,11 @@
     <Compile Include="Client_SignUp.Designer.cs">
       <DependentUpon>Client_SignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Deposit Funds.cs">
+    <Compile Include="Deposit_Funds.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Deposit Funds.Designer.cs">
-      <DependentUpon>Deposit Funds.cs</DependentUpon>
+    <Compile Include="Deposit_Funds.Designer.cs">
+      <DependentUpon>Deposit_Funds.cs</DependentUpon>
     </Compile>
     <Compile Include="Loading_page.cs">
       <SubType>Form</SubType>
@@ -115,6 +121,12 @@
     <Compile Include="Loan_Application.Designer.cs">
       <DependentUpon>Loan_Application.cs</DependentUpon>
     </Compile>
+    <Compile Include="Update_clientinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_clientinfo.Designer.cs">
+      <DependentUpon>Update_clientinfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Welcome_Page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +135,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Add_Remove_agent.resx">
+      <DependentUpon>Add_Remove_agent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Agent_Interface.resx">
       <DependentUpon>Agent_Interface.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,8 +153,8 @@
     <EmbeddedResource Include="Client_SignUp.resx">
       <DependentUpon>Client_SignUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Deposit Funds.resx">
-      <DependentUpon>Deposit Funds.cs</DependentUpon>
+    <EmbeddedResource Include="Deposit_Funds.resx">
+      <DependentUpon>Deposit_Funds.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loading_page.resx">
       <DependentUpon>Loading_page.cs</DependentUpon>
@@ -149,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Loan_Application.resx">
       <DependentUpon>Loan_Application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_clientinfo.resx">
+      <DependentUpon>Update_clientinfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome_Page.resx">
       <DependentUpon>Welcome_Page.cs</DependentUpon>
