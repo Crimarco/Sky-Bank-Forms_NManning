@@ -49,6 +49,7 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +59,7 @@
             this.lbl_agentprofile.AutoSize = true;
             this.lbl_agentprofile.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_agentprofile.ForeColor = System.Drawing.Color.White;
-            this.lbl_agentprofile.Location = new System.Drawing.Point(12, 117);
+            this.lbl_agentprofile.Location = new System.Drawing.Point(32, 117);
             this.lbl_agentprofile.Name = "lbl_agentprofile";
             this.lbl_agentprofile.Size = new System.Drawing.Size(107, 24);
             this.lbl_agentprofile.TabIndex = 13;
@@ -77,6 +78,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
@@ -257,6 +259,19 @@
             this.button3.Text = "Save as Master";
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(97)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(28, 204);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(129, 30);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Remove Agent";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
             // Add_Remove_agent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,5 +313,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button button4;
     }
 }
